@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Vé Máy Bay</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker@3.1.0/daterangepicker.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker@3.1.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker@3.1.0/daterangepicker.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class="header" >
+        <div class="header-container">
+            <div class="logo-container">
+                <h1 id="logo"><i class="fas fa-plane"></i> Hoài.com</h1>
+            </div>
+            <div class="nav-container">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="#">Vé Máy Bay</a></li>
+                        <li><a href="#">Khách Sạn</a></li>
+                        <li><a href="#">Xe Đưa Đón</a></li>
+                        <li><a href="#">Gói Du Lịch</a></li>
+                        <li><a href="#">Ưu Đãi</a></li>
+                        <li><a href="#">Khám Phá</a></li>
+                    </ul>
+                </nav>
+                <div class="user-actions">
+                    <a href="dangnhap.html">Đăng Nhập</a>
+                    <a href="dangki.html" class="cta-button">Đăng Ký</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div style="background-image: url('https://vnn-imgs-a1.vgcloud.vn/image.anninhthudo.vn/h500/uploaded/206/2020_01_18/long-den-do.jpg');" class="hero-section">
+            <div class="hero-content">
+                <h2>Tìm Kiếm Ưu Đãi Vé Máy Bay</h2>
+                <p>Khám phá điểm đến mới với giá vé tốt nhất. Đặt vé máy bay ngay hôm nay tại Hoài.com!</p>
+                <a href="#" class="cta-button">Tìm Kiếm Vé Máy Bay</a>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <h2>Đặt Vé Máy Bay Của Bạn</h2>
+            <div class="search-inputs">
+                <div class="input-group">
+                    <label for="from">Đi từ</label>
+                    <input type="text" id="from" placeholder="Thành phố hoặc sân bay đi">
+                </div>
+                <div class="input-group">
+                    <label for="to">Đến</label>
+                    <input type="text" id="to" placeholder="Thành phố hoặc sân bay đến">
+                </div>
+                <div class="input-group">
+                    <label for="date">Ngày Khởi Hành</label>
+                    <input type="text" id="date" class="datepicker form-control" readonly>
+                </div>
+                <div class="input-group">
+                    <label for="price">Giá</label>
+                    <input type="text" id="price">
+                </div>                
+                <div class="input-group">
+                    <label for="airlines">Hãng Máy Bay</label>
+                    <select id="airlines">
+                        <option value="vietnam-airlines">Vietnam Airlines</option>
+                        <option value="bamboo-airways">Bamboo Airways</option>
+                        <option value="vietjet-air">VietJet Air</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="tripType">Loại Chuyến</label>
+                    <select id="tripType">
+                        <option value="oneWay">Một Chiều</option>
+                        <option value="roundTrip">Khứ Hồi</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="adults">Người Lớn</label>
+                    <input type="number" id="adults" min="0" value="0">
+                </div>
+                <div class="input-group">
+                    <label for="children">Trẻ Em</label>
+                    <input type="number" id="children" min="0" value="0">
+                </div>
+                <button onclick="searchFlights()">Tìm Kiếm</button>
+            </div>
+        </div>
+        <div class="result-container">
+            Kết quả chuyến bay sẽ được hiển thị ở đây
+            <ul class="flight-list" id="flightList"></ul>
+        </div>
+        
+    </main>
+    <div class="bottom-wrapper">
+        <div class="footer-block">
+            <h3 class="footer-block-title">Liên Hệ Với Chúng Tôi</h3>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="index.html">Chăm Sóc Khách Hàng</a></li>
+                <li class="footer-list-item"><a href="index.html">Bảo Đảm Dịch Vụ</a></li>
+                <li class="footer-list-item"><a href="index.html">Phản Hồi Về Website</a></li>
+            </ul>
+        </div>
+        <div class="footer-block">
+            <h3 class="footer-block-title">Về Hoài.com</h3>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="index.html">Về Hoài.com</a></li>
+                <li class="footer-list-item"><a href="index.html">Tin Tức</a></li>
+                <li class="footer-list-item"><a href="index.html">Việc Làm</a></li>
+                <li class="footer-list-item"><a href="index.html">Điều Khoản &amp; Điều Kiện</a></li>
+                <li class="footer-list-item"><a href="index.html">Tuyên Bố Về Quyền Riêng Tư</a></li>
+                <li class="footer-list-item"><a href="index.html">Giới Thiệu Về Tập Đoàn Trip.com</a></li>
+            </ul>
+        </div>
+        <div class="footer-block">
+            <h3 class="footer-block-title">Các Dịch Vụ Khác</h3>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="index.html">Quan Hệ Đầu Tư</a></li>
+                <li class="footer-list-item"><a href="index.html">Phần Thưởng Trip.com</a></li>
+                <li class="footer-list-item"><a href="index.html">Chương Trình Hợp Tác</a></li>
+                <li class="footer-list-item"><a href="index.html">Làm Đối Tác Khách Sạn</a></li>
+                <li class="footer-list-item"><a href="index.html">Bảo Mật</a></li>
+            </ul>
+        </div>
+        <div class="footer-block">
+            <h3 class="footer-block-title">Hình Thức Thanh Toán</h3>
+            <div class="footer-payment">
+                <img class="footer-payment-icon" src="https://pages.trip.com/images/payment-method/visa.png" alt="visa">
+                <img class="footer-payment-icon" src="https://pages.trip.com/images/payment-method/master-card.png" alt="master-card">
+                <img class="footer-payment-icon" src="https://pages.trip.com/images/payment-method/jcb.png" alt="jcb">
+            </div>
+        </div>
+    </div>
+    <div align="center">Chỉ dành cho admin</div>
+    <div align="center" class="additional-buttons">
+        <a href="themvebay.html" class="cta-button">Thêm vé máy bay</a>
+        <a href="ttkhachhang.html" class="cta-button">Xem Thông Tin Khách Hàng</a>
+    </div>
+</div>
+    
+</body>
+</html>

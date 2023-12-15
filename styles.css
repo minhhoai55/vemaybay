@@ -1,0 +1,341 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+.header {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+#logo {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.nav-container {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.user-actions a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #ff6600;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.main {
+    margin-top: 80px; /* Để tránh bị che phủ bởi header */
+}
+
+.hero-section {
+    background-color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: #ff6600;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.search-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: -50px;
+    z-index: 1;
+}
+
+.search-inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group {
+    flex: 1;
+    margin-right: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.price-chart canvas {
+    width: 100%;
+}
+
+/* Thêm hiệu ứng hover cho nút Đặt Ngay */
+.button:hover {
+    background-color: #ff8533; /* Màu nền thay đổi khi hover */
+}
+
+/* Phần thông tin chuyến bay */
+.flight-item {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Hiệu ứng hover cho thông tin chuyến bay */
+.flight-item:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng khi hover */
+}
+
+/* Căn giữa văn bản trong thông tin chuyến bay */
+.flight-item p {
+    text-align: center;
+    margin: 0;
+}
+
+/* Nút Đặt Ngay trong thông tin chuyến bay */
+.flight-item button {
+    display: block;
+    margin: 15px auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hiệu ứng hover cho nút Đặt Ngay trong thông tin chuyến bay */
+.flight-item button:hover {
+    background-color: #ff8533; /* Màu nền thay đổi khi hover */
+}
+
+/* Danh sách chuyến bay */
+.flight-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Phần thông tin chuyến bay trong danh sách */
+.flight {
+    width: calc(30% - 10px);
+    margin-bottom: 20px;
+    box-sizing: border-box; 
+}
+
+/* Hiệu ứng hover cho phần thông tin chuyến bay trong danh sách */
+.flight:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng khi hover */
+}
+
+/* Phần thông tin chi tiết chuyến bay */
+.flight div {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+.flight-item img {
+    width: 100%; /* Make the image fill the container */
+    max-height: 150px; /* Set a maximum height for the image */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 8px; /* Add a border-radius for rounded corners */
+    margin-bottom: 10px; /* Add some space below the image */
+}
+
+/* Additional style for the "Đặt Ngay" button */
+.flight-item button {
+    background-color: #007bff; /* Blue button color */
+    color: #fff;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.flight-item button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-block {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-block-title {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list-item {
+    margin-bottom: 5px;
+}
+
+.footer-list-item a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-payment {
+    display: flex;
+}
+
+.footer-payment-icon {
+    margin-right: 10px;
+}
+.ui-datepicker {
+    font-size: 16px; /* Kích thước chữ */
+}
+
+.ui-datepicker-header {
+    background-color: #3498db; /* Màu nền header */
+    color: #fff; /* Màu chữ header */
+    border: 8px; /* Không có đường viền */
+}
+
+.ui-datepicker-calendar {
+    border: 8px; /* Không có đường viền */
+}
+
+.ui-datepicker-title {
+    color: #2c3e50; /* Màu chữ ngày tháng */
+}
+
+.ui-datepicker-day {
+    color: #2c3e50; /* Màu chữ ngày */
+}
+
+.ui-datepicker-week-end a {
+    color: #e74c3c; /* Màu chữ cuối tuần */
+}
+
+.ui-datepicker-today {
+    background-color: #e74c3c; /* Màu nền ngày hiện tại */
+    color: #fff; /* Màu chữ ngày hiện tại */
+}
+
+.ui-datepicker-current-day {
+    background-color: #3498db; /* Màu nền ngày được chọn */
+    color: #fff; /* Màu chữ ngày được chọn */
+}
+.input-group select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+

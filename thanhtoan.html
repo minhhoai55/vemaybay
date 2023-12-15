@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điền Thông Tin</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+.user-actions {
+    margin-left: auto;
+}
+
+.form-container {
+    text-align: center;
+    margin-top: 100px; /* Khoảng cách giữa header và form */
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e55300;
+}
+
+   </style>
+</head>
+<header class="header">
+    <div class="header-container">
+        <div class="logo-container">
+            <h1 id="logo"><i class="fas fa-plane"></i> Hoài.com</h1>
+        </div>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="#">Vé Máy Bay</a></li>
+                    <li><a href="#">Khách Sạn</a></li>
+                    <li><a href="#">Xe Đưa Đón</a></li>
+                    <li><a href="#">Gói Du Lịch</a></li>
+                    <li><a href="#">Ưu Đãi</a></li>
+                    <li><a href="#">Khám Phá</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="dangnhap.html">Đăng Nhập</a>
+                <a href="dangki.html" class="cta-button">Đăng Ký</a>
+            </div>
+        </div>
+    </div>
+</header>
+<body>
+<div class="form-container">
+    <form>
+        <label for="gender">Giới tính:</label>
+        <select id="gender" name="gender">
+            <option value="nam">Nam</option>
+            <option value="nu">Nữ</option>
+        </select>
+
+        <label for="firstName">Họ:</label>
+        <input type="text" id="firstName" name="firstName">
+
+        <label for="lastName">Tên:</label>
+        <input type="text" id="lastName" name="lastName">
+
+        <label for="dob">Ngày sinh:</label>
+        <input type="date" id="dob" name="dob">
+
+        <label for="country">Quốc gia:</label>
+        <input type="text" id="country" name="country">
+
+        <label for="phone">Số điện thoại:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="address">Nơi ở:</label>
+        <input type="text" id="address" name="address">
+
+        <label for="paymentMethod">Phương thức thanh toán:</label>
+        <select id="paymentMethod" name="paymentMethod">
+            <option value="visa">Visa</option>
+            <option value="mastercard">MasterCard</option>
+            <option value="paypal">PayPal</option>
+        </select>
+
+        <button type="submit">Gửi</button>
+        <div id="successNotification" style="display: none; color: green; margin-top: 10px;">Thanh toán thành công!</div>
+
+    </form>
+</div>
+</body>
+    <div class="bottom-wrapper">
+        <div class="footer-block">
+            <h3 class="footer-block-title">Liên Hệ Với Chúng Tôi</h3>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="index.html">Chăm Sóc Khách Hàng</a></li>
+                <li class="footer-list-item"><a href="index.html">Bảo Đảm Dịch Vụ</a></li>
+                <li class="footer-list-item"><a href="index.html">Phản Hồi Về Website</a></li>
+            </ul>
+        </div>
+        <div class="footer-block">
+            <h3 class="footer-block-title">Về Hoài.com</h3>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="index.html">Về Hoài.com</a></li>
+                <li class="footer-list-item"><a href="index.html">Tin Tức</a></li>
+                <li class="footer-list-item"><a href="index.html">Việc Làm</a></li>
+                <li class="footer-list-item"><a href="index.html">Điều Khoản &amp; Điều Kiện</a></li>
+                <li class="footer-list-item"><a href="index.html">Tuyên Bố Về Quyền Riêng Tư</a></li>
+                <li class="footer-list-item"><a href="index.html">Giới Thiệu Về Tập Đoàn Trip.com</a></li>
+            </ul>
+        </div>
+        <div class="footer-block">
+            <h3 class="footer-block-title">Các Dịch Vụ Khác</h3>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="index.html">Quan Hệ Đầu Tư</a></li>
+                <li class="footer-list-item"><a href="index.html">Phần Thưởng Trip.com</a></li>
+                <li class="footer-list-item"><a href="index.html">Chương Trình Hợp Tác</a></li>
+                <li class="footer-list-item"><a href="index.html">Làm Đối Tác Khách Sạn</a></li>
+                <li class="footer-list-item"><a href="index.html">Bảo Mật</a></li>
+            </ul>
+        </div>
+        <div class="footer-block">
+            <h3 class="footer-block-title">Hình Thức Thanh Toán</h3>
+            <div class="footer-payment">
+                <img class="footer-payment-icon" src="https://pages.trip.com/images/payment-method/visa.png" alt="visa">
+                <img class="footer-payment-icon" src="https://pages.trip.com/images/payment-method/master-card.png" alt="master-card">
+                <img class="footer-payment-icon" src="https://pages.trip.com/images/payment-method/jcb.png" alt="jcb">
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('form').submit(function (event) {
+                event.preventDefault();
+
+                const hoTen = $('#firstName').val() + ' ' + $('#lastName').val();
+                const ngaySinh = $('#dob').val();
+                const gioiTinh = $('#gender').val();
+                const phone = $('#phone').val();
+                const quocGia = $('#country').val();
+                const noiO = $('#address').val();
+                const email = $('#email').val();
+
+                $.ajax({
+                    url: 'https://657b3de2394ca9e4af140ab0.mockapi.io/api/khachhang',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        hoten: hoTen,
+                        ngaysinh: ngaySinh,
+                        gioitinh: gioiTinh,
+                        phone: phone,
+                        quocgia: quocGia,
+                        noio: noiO,
+                        email: email
+                    }),
+                    success: function (response) {
+                    console.log('Dữ liệu đã được gửi thành công:', response);
+
+                    $('#successNotification').show();
+
+                    $('form')[0].reset();
+                },
+                    error: function (error) {
+                        console.error('Lỗi khi gửi yêu cầu:', error);
+                    }
+                });
+            });
+        });
+    </script>
+</html>
