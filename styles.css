@@ -3,6 +3,7 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
 }
+
 .header {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -69,7 +70,7 @@ nav ul li a {
 }
 
 .main {
-    margin-top: 80px; /* Để tránh bị che phủ bởi header */
+    margin-top: 80px;
 }
 
 .hero-section {
@@ -217,7 +218,7 @@ button {
 .flight {
     width: calc(30% - 10px);
     margin-bottom: 20px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 /* Hiệu ứng hover cho phần thông tin chuyến bay trong danh sách */
@@ -231,17 +232,18 @@ button {
     padding: 10px;
     text-align: center;
 }
+
 .flight-item img {
-    width: 100%; /* Make the image fill the container */
-    max-height: 150px; /* Set a maximum height for the image */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-    border-radius: 8px; /* Add a border-radius for rounded corners */
-    margin-bottom: 10px; /* Add some space below the image */
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 /* Additional style for the "Đặt Ngay" button */
 .flight-item button {
-    background-color: #007bff; /* Blue button color */
+    background-color: #007bff;
     color: #fff;
     border: none;
     padding: 8px;
@@ -250,7 +252,7 @@ button {
 }
 
 .flight-item button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
 .bottom-wrapper {
@@ -293,41 +295,43 @@ button {
 .footer-payment-icon {
     margin-right: 10px;
 }
+
 .ui-datepicker {
-    font-size: 16px; /* Kích thước chữ */
+    font-size: 16px;
 }
 
 .ui-datepicker-header {
-    background-color: #3498db; /* Màu nền header */
-    color: #fff; /* Màu chữ header */
-    border: 8px; /* Không có đường viền */
+    background-color: #3498db;
+    color: #fff;
+    border: 8px;
 }
 
 .ui-datepicker-calendar {
-    border: 8px; /* Không có đường viền */
+    border: 8px;
 }
 
 .ui-datepicker-title {
-    color: #2c3e50; /* Màu chữ ngày tháng */
+    color: #2c3e50;
 }
 
 .ui-datepicker-day {
-    color: #2c3e50; /* Màu chữ ngày */
+    color: #2c3e50;
 }
 
 .ui-datepicker-week-end a {
-    color: #e74c3c; /* Màu chữ cuối tuần */
+    color: #e74c3c;
 }
 
 .ui-datepicker-today {
-    background-color: #e74c3c; /* Màu nền ngày hiện tại */
-    color: #fff; /* Màu chữ ngày hiện tại */
+    background-color: #e74c3c;
+    color: #fff;
 }
 
 .ui-datepicker-current-day {
-    background-color: #3498db; /* Màu nền ngày được chọn */
-    color: #fff; /* Màu chữ ngày được chọn */
+    background-color: #3498db;
+    color: #fff;
 }
+
 .input-group select {
     width: 100%;
     padding: 8px;
@@ -338,4 +342,74 @@ button {
     box-sizing: border-box;
 }
 
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    .logo-container {
+        text-align: center;
+        margin-bottom: 10px;
+    }
 
+    #logo {
+        font-size: 20px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-inputs {
+        flex-direction: column;
+    }
+
+    .input-group {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .result-container {
+        margin-top: 40px;
+    }
+
+    .flight {
+        width: 100%;
+    }
+}
+/* Responsive styles for header */
+@media only screen and (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-container {
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .user-actions {
+        margin-top: 15px;
+    }
+}
